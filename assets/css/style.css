@@ -206,10 +206,10 @@ body.home .site-nav .nav-links a:hover,
 body.home .site-nav .nav-links a[aria-current] { color: var(--crimson); }
 body.home .site-nav .nav-toggle span { background: var(--ink); }
 
-/* Bio + contact overlay — left edge under "A" in Ambition. */
+/* Bio + contact overlay — left edge under "m" in Ambition. */
 .splash-bio {
   position: absolute;
-  left: 59.5%; top: 36%;
+  left: 62.5%; top: 29%;
   z-index: 10;
   max-width: 380px;
   text-align: left;
