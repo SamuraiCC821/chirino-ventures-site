@@ -198,7 +198,7 @@ body.home::after { display: none; }
     transform: translateX(-50%);
   }
 }
-body.home .site-nav { background: rgba(11,8,4,.75); border-bottom-color: rgba(245,237,214,.1); }
+body.home .site-nav { background: transparent; border-bottom-color: transparent; box-shadow: none; }
 body.home .site-nav .brand-name { color: var(--p1); }
 body.home .site-nav .brand-sub { color: rgba(245,237,214,.55); }
 body.home .site-nav .nav-links a { color: rgba(245,237,214,.5); }
@@ -206,13 +206,14 @@ body.home .site-nav .nav-links a:hover,
 body.home .site-nav .nav-links a[aria-current] { color: var(--p1); }
 body.home .site-nav .nav-toggle span { background: var(--p1); }
 
-/* Bio + contact overlay in the sky negative space */
+/* Bio + contact overlay — center-left open sky */
 .splash-bio {
   position: absolute;
-  right: 6%; top: 37%;
+  left: 50%; top: 42%;
+  transform: translateX(-50%);
   z-index: 10;
-  max-width: 270px;
-  text-align: right;
+  max-width: 300px;
+  text-align: center;
   opacity: 0;
   animation: ink-fade 1s ease-out 3.4s forwards;
 }
@@ -227,7 +228,7 @@ body.home .site-nav .nav-toggle span { background: var(--p1); }
 .splash-contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: .35rem;
 }
 .splash-contact-link {
@@ -259,8 +260,9 @@ body.home .site-nav .nav-toggle span { background: var(--p1); }
 
 @media(max-width: 680px) {
   .splash-bio {
-    right: 5%; top: auto; bottom: 6rem;
-    max-width: 220px;
+    left: 50%; top: auto; bottom: 6rem;
+    transform: translateX(-50%);
+    max-width: 82vw;
   }
 }
 
