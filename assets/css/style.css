@@ -471,37 +471,24 @@ body.about::after {
   background: rgba(6, 2, 0, 0.30);
 }
 
-/* Manuscript column: subtle dark card behind the text so it's always legible */
+/* Manuscript column: near-opaque dark panel — image shows on sides, text is crystal clear */
 body.about .manuscript {
   position: relative;
   z-index: 1;
-  background: rgba(8, 3, 0, 0.52);
-  border-radius: 2px;
+  background: rgba(6, 2, 0, 0.88);
+  box-shadow: 0 0 80px 40px rgba(6, 2, 0, 0.88);
 }
 
-/* Text: bright parchment + text-shadow for depth */
-body.about .ms-title {
-  color: #F9F2DF;
-  text-shadow: 0 1px 12px rgba(0,0,0,0.65);
-}
+/* Text: full-brightness parchment */
+body.about .ms-title { color: #F9F2DF; }
 body.about .ms-title em { color: #E8714A; }
-body.about .ms-sub {
-  color: rgba(249,242,223,0.70);
-  text-shadow: 0 1px 6px rgba(0,0,0,0.55);
-}
-body.about .ms-p {
-  color: #F0E8CF;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
-}
-body.about .ms-h2 {
-  color: #E8714A;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
-}
+body.about .ms-sub { color: rgba(249,242,223,0.65); }
+body.about .ms-p { color: #EDE4CA; }
+body.about .ms-h2 { color: #E8714A; }
 body.about .ms-rule { border-top-color: rgba(249,242,223,0.18); }
 body.about .ms-close {
-  color: rgba(249,242,223,0.58);
+  color: rgba(249,242,223,0.55);
   border-top-color: rgba(249,242,223,0.15);
-  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
 }
 body.about .ms-close em { color: #E8714A; }
 
