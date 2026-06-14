@@ -475,11 +475,12 @@ body.home::after { display: none; }
   .splash-mobile-calli { display: none; }
   .splash-bio-text { display: none; }
 
-  /* Contact only — float in the hollow under the crest, above Fuji */
+  /* Contact only — in the hollow under the wave crest */
   .splash-bio {
-    right: 5%; top: 58%;
+    right: 5%; top: 46%;
     left: auto; transform: none;
     max-width: 60vw; text-align: right;
+    animation: none; opacity: 1;
   }
   .splash-contact { align-items: flex-end; gap: .5rem; }
   .splash-contact-link { font-size: .65rem; }
