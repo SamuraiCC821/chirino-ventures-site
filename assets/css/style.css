@@ -525,68 +525,66 @@ body.about .footer-mark { color: rgba(249,242,223,0.16); }
 
 /* ─── NOW PAGE — Bird, ink on parchment ─────────────────── */
 body.now {
-  background-color: var(--p2);
+  background-color: #100c08;
   background-image: url('../images/bird.jpg');
-  /* auto width, full viewport height — shows entire scroll painting height */
-  background-size: auto 100vh;
-  background-position: right center;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 62%;
   background-attachment: fixed;
 }
 @media (hover: none) {
-  body.now { background-attachment: scroll; background-size: auto 100svh; }
+  body.now { background-attachment: scroll; }
 }
 
-/* No global overlay — painting shows fully */
-body.now::after { display: none; }
+/* Light veil — softens without killing the painting */
+body.now::after {
+  background: rgba(10, 8, 4, 0.28);
+}
 
-/* Text column: left-aligned so painting is visible on the right */
+/* Text column: opaque dark panel so ink reads clean against the painting */
 body.now .manuscript {
   position: relative;
   z-index: 1;
-  margin-left: clamp(1.5rem, 6vw, 5rem);
-  margin-right: auto;
-  background: rgba(245, 237, 210, 0.96);
-  box-shadow: 0 0 60px 40px rgba(245, 237, 210, 0.96);
+  background: rgba(8, 5, 2, 0.82);
+  box-shadow: 0 0 80px 50px rgba(8, 5, 2, 0.82);
 }
 
-/* All text stays dark ink — contrast is high against the parchment surface */
-body.now .ms-title { color: var(--ink); }
-body.now .ms-title em { color: var(--crimson); }
-body.now .ms-sub { color: var(--teal); }
-body.now .ms-p { color: var(--ink); }
-body.now .ms-h2 { color: var(--crimson); }
-body.now .ms-rule { border-top-color: var(--ink-25); }
-body.now .ms-close { color: var(--ink-50); border-top-color: var(--ink-25); }
-body.now .ms-close em { color: var(--crimson); }
+/* Text: parchment tones over dark panel */
+body.now .ms-title { color: #F5EDD6; }
+body.now .ms-title em { color: #D4553A; }
+body.now .ms-sub { color: rgba(245,237,214,0.62); }
+body.now .ms-p { color: #EDE4CA; }
+body.now .ms-h2 { color: #D4553A; }
+body.now .ms-rule { border-top-color: rgba(245,237,214,0.16); }
+body.now .ms-close { color: rgba(245,237,214,0.52); border-top-color: rgba(245,237,214,0.14); }
+body.now .ms-close em { color: #D4553A; }
 
-/* Nav: warm parchment glass */
+/* Nav: dark glass */
 body.now .site-nav {
-  background: rgba(237, 224, 192, 0.90);
-  border-bottom-color: var(--ink-25);
+  background: rgba(8,5,2,0.65);
+  border-bottom-color: rgba(245,237,214,0.10);
 }
-body.now .site-nav .brand-name { color: var(--ink); }
-body.now .site-nav .brand-sub { color: var(--teal); }
-body.now .site-nav .nav-links a { color: var(--ink-50); }
+body.now .site-nav .brand-name { color: #F5EDD6; }
+body.now .site-nav .brand-sub { color: rgba(245,237,214,0.50); }
+body.now .site-nav .nav-links a { color: rgba(245,237,214,0.50); }
 body.now .site-nav .nav-links a:hover,
-body.now .site-nav .nav-links a[aria-current] { color: var(--crimson); }
-body.now .nav-toggle span { background: var(--ink); }
+body.now .site-nav .nav-links a[aria-current] { color: #F5EDD6; }
+body.now .nav-toggle span { background: #F5EDD6; }
 
 /* Footer */
-body.now .site-footer { border-top-color: var(--ink-25); }
-body.now .footer-copy { color: var(--ink-50); }
-body.now .footer-mark { color: var(--ink-25); }
+body.now .site-footer { border-top-color: rgba(245,237,214,0.10); }
+body.now .footer-copy { color: rgba(245,237,214,0.35); }
+body.now .footer-mark { color: rgba(245,237,214,0.16); }
 
 /* Mobile nav dropdown */
 @media(max-width: 680px) {
   body.now .nav-links.open {
-    background: rgba(237, 224, 192, 0.97);
-    border-bottom-color: var(--ink-25);
+    background: rgba(8,5,2,0.94);
+    border-bottom-color: rgba(245,237,214,0.10);
   }
   body.now .nav-links.open a {
-    color: var(--ink-50);
-    border-bottom-color: var(--ink-25);
+    color: rgba(245,237,214,0.70);
+    border-bottom-color: rgba(245,237,214,0.10);
   }
   body.now .nav-links.open a:hover,
-  body.now .nav-links.open a[aria-current] { color: var(--crimson); }
+  body.now .nav-links.open a[aria-current] { color: #F5EDD6; }
 }
