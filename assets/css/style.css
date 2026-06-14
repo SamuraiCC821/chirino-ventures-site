@@ -170,38 +170,34 @@ body.home::after { display: none; }
 /* Mobile calligraphy — hidden on desktop, shown when SVG is hidden on mobile */
 .splash-mobile-calli { display: none; }
 
-.splash-mark {
-  position: absolute; top: 1.6rem; left: 1.8rem; z-index: 10;
-  width: 38px; height: 38px; display: grid; place-items: center;
-  opacity: .8; transition: opacity .2s;
-}
-.splash-mark:hover { opacity: 1; }
-.splash-mark::before {
-  content: ''; position: absolute; inset: 0; background: var(--crimson);
-  clip-path: polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);
-}
-.splash-mark-letter {
-  font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; font-style: italic;
-  color: var(--p1); position: relative; z-index: 1;
-}
 .splash-enter {
-  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  position: absolute;
+  top: 48%; right: 8%;
   z-index: 10;
   font-family: 'Syne', sans-serif; font-size: .62rem; font-weight: 700;
   letter-spacing: .22em; text-transform: uppercase;
-  color: var(--p1);
-  border: 1px solid rgba(245,237,214,.7);
-  padding: .75rem 2.2rem;
-  transition: background .25s, color .25s, border-color .25s;
+  color: var(--ink);
+  background: rgba(245,237,214,0.88);
+  border: 1px solid rgba(26,16,5,0.18);
+  padding: .9rem 2.6rem;
   white-space: nowrap;
+  opacity: 0;
+  /* Appears after calligraphy finishes — creates a natural reveal sequence */
+  animation: ink-fade 0.8s ease-out 4.4s forwards;
+  transition: background .2s, color .2s, border-color .2s;
 }
 .splash-enter:hover {
   background: var(--p1);
-  color: var(--ink);
-  border-color: var(--p1);
+  color: var(--crimson);
+  border-color: var(--crimson);
 }
-.splash-enter-line,
-.splash-enter-arrow { display: none; }
+@media(max-width: 680px) {
+  .splash-enter {
+    top: auto; right: auto;
+    bottom: 3rem; left: 50%;
+    transform: translateX(-50%);
+  }
+}
 body.home .site-nav { opacity: 0; pointer-events: none; transition: opacity .2s, box-shadow .3s; background: rgba(11,8,4,.75); border-bottom-color: rgba(245,237,214,.1); }
 body.home .site-nav .brand-name,
 body.home .site-nav .nav-links a { color: var(--p1); }
