@@ -157,7 +157,7 @@ body::after {
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ─── SPLASH (home — body.home) ─────────────────────────── */
-body.home { background: #0b0804; }
+body.home { background: var(--p2); }
 body.home::after { display: none; }
 
 .splash { position: relative; width: 100vw; height: 100svh; overflow: hidden; }
