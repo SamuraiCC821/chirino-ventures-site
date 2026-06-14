@@ -528,7 +528,7 @@ body.now {
   background-color: var(--p2);
   background-image: url('../images/bird.jpg');
   background-size: cover;
-  background-position: center 20%;
+  background-position: center 62%;
   background-attachment: fixed;
 }
 @media (hover: none) {
