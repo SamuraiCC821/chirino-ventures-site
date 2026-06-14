@@ -527,23 +527,27 @@ body.about .footer-mark { color: rgba(249,242,223,0.16); }
 body.now {
   background-color: var(--p2);
   background-image: url('../images/bird.jpg');
-  background-size: cover;
-  background-position: center 62%;
+  /* auto width, full viewport height — shows entire scroll painting height */
+  background-size: auto 100vh;
+  background-position: right center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 @media (hover: none) {
-  body.now { background-attachment: scroll; }
+  body.now { background-attachment: scroll; background-size: auto 100svh; }
 }
 
-/* No global overlay — bird shows fully */
+/* No global overlay — painting shows fully */
 body.now::after { display: none; }
 
-/* Text column: opaque parchment panel — bird visible on sides, ink on paper in center */
+/* Text column: left-aligned so painting is visible on the right */
 body.now .manuscript {
   position: relative;
   z-index: 1;
-  background: rgba(245, 237, 210, 0.94);
-  box-shadow: 0 0 100px 60px rgba(245, 237, 210, 0.94);
+  margin-left: clamp(1.5rem, 6vw, 5rem);
+  margin-right: auto;
+  background: rgba(245, 237, 210, 0.96);
+  box-shadow: 0 0 60px 40px rgba(245, 237, 210, 0.96);
 }
 
 /* All text stays dark ink — contrast is high against the parchment surface */
