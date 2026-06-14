@@ -522,3 +522,69 @@ body.about .footer-mark { color: rgba(249,242,223,0.16); }
   body.about .nav-links.open a:hover,
   body.about .nav-links.open a[aria-current] { color: #F9F2DF; }
 }
+
+/* ─── NOW PAGE — Bird, ink on parchment ─────────────────── */
+body.now {
+  background-color: var(--p2);
+  background-image: url('../images/bird.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-attachment: fixed;
+}
+@media (hover: none) {
+  body.now { background-attachment: scroll; }
+}
+
+/* Warm parchment wash — makes image read like ink on aged paper */
+body.now::after {
+  background: rgba(232, 216, 178, 0.58);
+}
+
+/* Text column: semi-transparent parchment surface — the "paper" the ink writes onto */
+body.now .manuscript {
+  position: relative;
+  z-index: 1;
+  background: rgba(245, 237, 210, 0.86);
+  box-shadow: 0 0 80px 50px rgba(245, 237, 210, 0.86);
+}
+
+/* All text stays dark ink — contrast is high against the parchment surface */
+body.now .ms-title { color: var(--ink); }
+body.now .ms-title em { color: var(--crimson); }
+body.now .ms-sub { color: var(--teal); }
+body.now .ms-p { color: var(--ink); }
+body.now .ms-h2 { color: var(--crimson); }
+body.now .ms-rule { border-top-color: var(--ink-25); }
+body.now .ms-close { color: var(--ink-50); border-top-color: var(--ink-25); }
+body.now .ms-close em { color: var(--crimson); }
+
+/* Nav: warm parchment glass */
+body.now .site-nav {
+  background: rgba(237, 224, 192, 0.90);
+  border-bottom-color: var(--ink-25);
+}
+body.now .site-nav .brand-name { color: var(--ink); }
+body.now .site-nav .brand-sub { color: var(--teal); }
+body.now .site-nav .nav-links a { color: var(--ink-50); }
+body.now .site-nav .nav-links a:hover,
+body.now .site-nav .nav-links a[aria-current] { color: var(--crimson); }
+body.now .nav-toggle span { background: var(--ink); }
+
+/* Footer */
+body.now .site-footer { border-top-color: var(--ink-25); }
+body.now .footer-copy { color: var(--ink-50); }
+body.now .footer-mark { color: var(--ink-25); }
+
+/* Mobile nav dropdown */
+@media(max-width: 680px) {
+  body.now .nav-links.open {
+    background: rgba(237, 224, 192, 0.97);
+    border-bottom-color: var(--ink-25);
+  }
+  body.now .nav-links.open a {
+    color: var(--ink-50);
+    border-bottom-color: var(--ink-25);
+  }
+  body.now .nav-links.open a:hover,
+  body.now .nav-links.open a[aria-current] { color: var(--crimson); }
+}
