@@ -257,13 +257,6 @@ body.home .site-nav .nav-toggle span { background: var(--ink); }
 .home-footer .footer-copy { color: rgba(245,237,214,.3); }
 .home-footer .footer-mark { color: rgba(245,237,214,.12); }
 
-@media(max-width: 680px) {
-  .splash-bio {
-    left: 50%; top: auto; bottom: 6rem;
-    transform: translateX(-50%);
-    max-width: 82vw; text-align: center;
-  }
-}
 
 /* ─── HOME CONTENT (below splash) ───────────────────────── */
 .home-content {
@@ -473,11 +466,36 @@ body.home::after { display: none; }
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width: 680px) {
   /* ── Splash: mobile portrait fix ── */
-  /* Pull the image up so the dramatic wave crest + sky fill the portrait frame.
-     50% horizontal keeps Mt. Fuji centred; 18% vertical pulls the crest into view. */
-  .splash-img {
-    background-position: 50% 18%;
+  .splash-img { background-position: 50% 18%; }
+
+  /* Desktop SVG clips badly at portrait widths — hide it */
+  .splash-svg { display: none; }
+
+  /* Mobile calligraphy text replaces SVG */
+  .splash-mobile-calli {
+    display: block;
+    position: absolute;
+    right: 4%; top: 10%;
+    z-index: 10;
+    text-align: right;
   }
+  .splash-mobile-line {
+    display: block;
+    font-family: 'Yuji Syuku', 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    font-weight: 400;
+    color: #1A1005;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+  }
+
+  /* Bio: pinned bottom-right, away from the wave */
+  .splash-bio {
+    right: 4%; top: auto; bottom: 7rem;
+    left: auto; transform: none;
+    max-width: 84vw; text-align: right;
+  }
+  .splash-contact { align-items: flex-end; }
 
   .nav-links { display: none; }
   .nav-links.open {
