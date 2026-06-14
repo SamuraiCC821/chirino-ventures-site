@@ -206,19 +206,20 @@ body.home .site-nav .nav-links a:hover,
 body.home .site-nav .nav-links a[aria-current] { color: var(--crimson); }
 body.home .site-nav .nav-toggle span { background: var(--ink); }
 
-/* Bio + contact overlay — right-side sky, below calligraphy */
+/* Bio + contact overlay — centered under "Ambition." */
 .splash-bio {
   position: absolute;
-  right: 5%; top: 40%;
+  left: 78%; top: 36%;
+  transform: translateX(-50%);
   z-index: 10;
-  max-width: 320px;
-  text-align: right;
+  max-width: 360px;
+  text-align: center;
   opacity: 0;
   animation: ink-fade 1s ease-out 3.4s forwards;
 }
 .splash-bio-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(.92rem, 1.5vw, 1.1rem);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   font-weight: 300;
   line-height: 1.75;
   color: #1A1005;
@@ -227,12 +228,12 @@ body.home .site-nav .nav-toggle span { background: var(--ink); }
 .splash-contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: .35rem;
 }
 .splash-contact-link {
   font-family: 'Syne', sans-serif;
-  font-size: .52rem;
+  font-size: .62rem;
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -259,8 +260,9 @@ body.home .site-nav .nav-toggle span { background: var(--ink); }
 
 @media(max-width: 680px) {
   .splash-bio {
-    right: 5%; top: auto; bottom: 6rem;
-    max-width: 82vw; text-align: right;
+    left: 50%; top: auto; bottom: 6rem;
+    transform: translateX(-50%);
+    max-width: 82vw; text-align: center;
   }
 }
 
