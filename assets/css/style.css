@@ -471,35 +471,19 @@ body.home::after { display: none; }
   /* Desktop SVG clips badly at portrait widths — hide it */
   .splash-svg { display: none; }
 
-  /* Mobile calligraphy — constrained to upper-right sky */
-  .splash-mobile-calli {
-    display: block;
-    position: absolute;
-    right: 3%; top: 7%;
-    z-index: 10;
-    text-align: right;
-    max-width: 48vw;
-  }
-  .splash-mobile-line {
-    display: block;
-    font-family: 'Yuji Syuku', 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(.95rem, 4.8vw, 1.3rem);
-    font-weight: 400;
-    color: #1A1005;
-    line-height: 1.3;
-    letter-spacing: 0.04em;
-  }
+  /* Mobile: hide calligraphy and bio — clean image on portrait */
+  .splash-mobile-calli { display: none; }
+  .splash-bio-text { display: none; }
 
-  /* Bio: tight below calligraphy, well above the wave */
+  /* Contact only — float in the hollow under the crest, above Fuji */
   .splash-bio {
-    right: 3%; top: 21%;
+    right: 5%; top: 58%;
     left: auto; transform: none;
-    max-width: 48vw; text-align: right;
+    max-width: 60vw; text-align: right;
   }
-  .splash-bio-text { font-size: clamp(.7rem, 3vw, .88rem); }
-  .splash-contact { align-items: flex-end; }
-  .splash-contact-link { font-size: .55rem; }
-  .splash-contact-note { font-size: .65rem; }
+  .splash-contact { align-items: flex-end; gap: .5rem; }
+  .splash-contact-link { font-size: .65rem; }
+  .splash-contact-note { font-size: .72rem; margin-top: .3rem; }
 
   .nav-links { display: none; }
   .nav-links.open {
