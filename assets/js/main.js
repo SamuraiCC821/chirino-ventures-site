@@ -1,4 +1,7 @@
 (() => {
+  // Signal JS is running — enables .js [data-reveal] CSS animations
+  document.documentElement.classList.add('js');
+
   // ── NAV: sticky + splash-hide ────────────────────────────
   const nav    = document.querySelector('[data-nav]');
   const toggle = document.querySelector('[data-toggle]');
