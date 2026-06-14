@@ -452,3 +452,62 @@ body.home::after { display: none; }
   .js [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
   *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ─── ABOUT PAGE — Red Fuji (Hokusai, ca. 1831, public domain) ── */
+body.about {
+  background-color: #130803;
+  background-image: url('../images/red-fuji.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+}
+/* Touch devices don't support fixed background-attachment reliably */
+@media (hover: none) {
+  body.about { background-attachment: scroll; }
+}
+
+/* Replace edge-burn with a dark translucent veil — image bleeds through */
+body.about::after {
+  background: rgba(8, 3, 0, 0.60);
+}
+
+/* All manuscript text: switch to parchment tones on dark background */
+body.about .ms-title { color: var(--p1); }
+body.about .ms-title em { color: #D4553A; }
+body.about .ms-sub { color: rgba(245,237,214,0.60); }
+body.about .ms-p { color: rgba(245,237,214,0.87); }
+body.about .ms-h2 { color: #D4553A; }
+body.about .ms-rule { border-top-color: rgba(245,237,214,0.14); }
+body.about .ms-close { color: rgba(245,237,214,0.52); border-top-color: rgba(245,237,214,0.12); }
+body.about .ms-close em { color: #D4553A; }
+
+/* Nav: dark glass */
+body.about .site-nav {
+  background: rgba(8,3,0,0.68);
+  border-bottom-color: rgba(245,237,214,0.10);
+}
+body.about .site-nav .brand-name { color: var(--p1); }
+body.about .site-nav .brand-sub { color: rgba(245,237,214,0.48); }
+body.about .site-nav .nav-links a { color: rgba(245,237,214,0.48); }
+body.about .site-nav .nav-links a:hover,
+body.about .site-nav .nav-links a[aria-current] { color: var(--p1); }
+body.about .nav-toggle span { background: var(--p1); }
+
+/* Footer */
+body.about .site-footer { border-top-color: rgba(245,237,214,0.10); }
+body.about .footer-copy { color: rgba(245,237,214,0.32); }
+body.about .footer-mark { color: rgba(245,237,214,0.14); }
+
+/* Mobile nav dropdown */
+@media(max-width: 680px) {
+  body.about .nav-links.open {
+    background: rgba(8,3,0,0.94);
+    border-bottom-color: rgba(245,237,214,0.10);
+  }
+  body.about .nav-links.open a {
+    color: rgba(245,237,214,0.70);
+    border-bottom-color: rgba(245,237,214,0.10);
+  }
+  body.about .nav-links.open a:hover,
+  body.about .nav-links.open a[aria-current] { color: var(--p1); }
+}
