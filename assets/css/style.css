@@ -199,27 +199,26 @@ body.home::after { display: none; }
   }
 }
 body.home .site-nav { background: transparent; border-bottom-color: transparent; box-shadow: none; }
-body.home .site-nav .brand-name { color: var(--p1); }
-body.home .site-nav .brand-sub { color: rgba(245,237,214,.55); }
-body.home .site-nav .nav-links a { color: rgba(245,237,214,.5); }
+body.home .site-nav .brand-name { color: var(--ink); }
+body.home .site-nav .brand-sub { color: var(--teal); }
+body.home .site-nav .nav-links a { color: var(--ink-50); }
 body.home .site-nav .nav-links a:hover,
-body.home .site-nav .nav-links a[aria-current] { color: var(--p1); }
-body.home .site-nav .nav-toggle span { background: var(--p1); }
+body.home .site-nav .nav-links a[aria-current] { color: var(--crimson); }
+body.home .site-nav .nav-toggle span { background: var(--ink); }
 
-/* Bio + contact overlay — center-left open sky */
+/* Bio + contact overlay — right-side sky, below calligraphy */
 .splash-bio {
   position: absolute;
-  left: 50%; top: 42%;
-  transform: translateX(-50%);
+  right: 5%; top: 40%;
   z-index: 10;
-  max-width: 300px;
-  text-align: center;
+  max-width: 320px;
+  text-align: right;
   opacity: 0;
   animation: ink-fade 1s ease-out 3.4s forwards;
 }
 .splash-bio-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(.78rem, 1.3vw, .92rem);
+  font-size: clamp(.92rem, 1.5vw, 1.1rem);
   font-weight: 300;
   line-height: 1.75;
   color: #1A1005;
@@ -228,7 +227,7 @@ body.home .site-nav .nav-toggle span { background: var(--p1); }
 .splash-contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: .35rem;
 }
 .splash-contact-link {
@@ -260,9 +259,8 @@ body.home .site-nav .nav-toggle span { background: var(--p1); }
 
 @media(max-width: 680px) {
   .splash-bio {
-    left: 50%; top: auto; bottom: 6rem;
-    transform: translateX(-50%);
-    max-width: 82vw;
+    right: 5%; top: auto; bottom: 6rem;
+    max-width: 82vw; text-align: right;
   }
 }
 
