@@ -424,41 +424,10 @@ body.home::after { display: none; }
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width: 680px) {
   /* ── Splash: mobile portrait fix ── */
-  /* background-position shifts up + right to show wave crest in portrait crop */
+  /* Pull the image up so the dramatic wave crest + sky fill the portrait frame.
+     50% horizontal keeps Mt. Fuji centred; 18% vertical pulls the crest into view. */
   .splash-img {
-    background-position: 62% 12%;
-  }
-
-  /* SVG text lives at x=700–1160 in 1200-wide viewBox;
-     xMidYMid slice on portrait only shows x≈415–785 — text is off-screen.
-     Hide the SVG and show the CSS fallback instead. */
-  .splash-svg { display: none; }
-
-  /* Mobile calligraphy text overlay */
-  .splash-mobile-calli {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 22%;
-    right: 6%;
-    z-index: 5;
-  }
-  .splash-mobile-line {
-    display: block;
-    font-family: 'Yuji Syuku', 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(1.75rem, 8vw, 2.8rem);
-    font-weight: 400;
-    color: #1A1005;
-    letter-spacing: 0.04em;
-    line-height: 1.45;
-    opacity: 0;
-  }
-  .splash-mobile-line:nth-child(1) {
-    animation: ink-fade 1.0s ease-out 0.4s forwards;
-  }
-  .splash-mobile-line:nth-child(2) {
-    animation: ink-fade 1.2s ease-out 2.0s forwards;
+    background-position: 50% 18%;
   }
 
   .nav-links { display: none; }
