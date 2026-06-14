@@ -458,7 +458,7 @@ body.about {
   background-color: #130803;
   background-image: url('../images/red-fuji.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 25%;
   background-attachment: fixed;
 }
 /* Touch devices don't support fixed background-attachment reliably */
@@ -466,48 +466,72 @@ body.about {
   body.about { background-attachment: scroll; }
 }
 
-/* Replace edge-burn with a dark translucent veil — image bleeds through */
+/* Light veil — just enough to soften the image, image still vivid */
 body.about::after {
-  background: rgba(8, 3, 0, 0.60);
+  background: rgba(6, 2, 0, 0.30);
 }
 
-/* All manuscript text: switch to parchment tones on dark background */
-body.about .ms-title { color: var(--p1); }
-body.about .ms-title em { color: #D4553A; }
-body.about .ms-sub { color: rgba(245,237,214,0.60); }
-body.about .ms-p { color: rgba(245,237,214,0.87); }
-body.about .ms-h2 { color: #D4553A; }
-body.about .ms-rule { border-top-color: rgba(245,237,214,0.14); }
-body.about .ms-close { color: rgba(245,237,214,0.52); border-top-color: rgba(245,237,214,0.12); }
-body.about .ms-close em { color: #D4553A; }
+/* Manuscript column: subtle dark card behind the text so it's always legible */
+body.about .manuscript {
+  position: relative;
+  z-index: 1;
+  background: rgba(8, 3, 0, 0.52);
+  border-radius: 2px;
+}
+
+/* Text: bright parchment + text-shadow for depth */
+body.about .ms-title {
+  color: #F9F2DF;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.65);
+}
+body.about .ms-title em { color: #E8714A; }
+body.about .ms-sub {
+  color: rgba(249,242,223,0.70);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+}
+body.about .ms-p {
+  color: #F0E8CF;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
+}
+body.about .ms-h2 {
+  color: #E8714A;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+}
+body.about .ms-rule { border-top-color: rgba(249,242,223,0.18); }
+body.about .ms-close {
+  color: rgba(249,242,223,0.58);
+  border-top-color: rgba(249,242,223,0.15);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.50);
+}
+body.about .ms-close em { color: #E8714A; }
 
 /* Nav: dark glass */
 body.about .site-nav {
-  background: rgba(8,3,0,0.68);
-  border-bottom-color: rgba(245,237,214,0.10);
+  background: rgba(6,2,0,0.60);
+  border-bottom-color: rgba(249,242,223,0.10);
 }
-body.about .site-nav .brand-name { color: var(--p1); }
-body.about .site-nav .brand-sub { color: rgba(245,237,214,0.48); }
-body.about .site-nav .nav-links a { color: rgba(245,237,214,0.48); }
+body.about .site-nav .brand-name { color: #F9F2DF; }
+body.about .site-nav .brand-sub { color: rgba(249,242,223,0.50); }
+body.about .site-nav .nav-links a { color: rgba(249,242,223,0.52); }
 body.about .site-nav .nav-links a:hover,
-body.about .site-nav .nav-links a[aria-current] { color: var(--p1); }
-body.about .nav-toggle span { background: var(--p1); }
+body.about .site-nav .nav-links a[aria-current] { color: #F9F2DF; }
+body.about .nav-toggle span { background: #F9F2DF; }
 
 /* Footer */
-body.about .site-footer { border-top-color: rgba(245,237,214,0.10); }
-body.about .footer-copy { color: rgba(245,237,214,0.32); }
-body.about .footer-mark { color: rgba(245,237,214,0.14); }
+body.about .site-footer { border-top-color: rgba(249,242,223,0.10); }
+body.about .footer-copy { color: rgba(249,242,223,0.35); }
+body.about .footer-mark { color: rgba(249,242,223,0.16); }
 
 /* Mobile nav dropdown */
 @media(max-width: 680px) {
   body.about .nav-links.open {
-    background: rgba(8,3,0,0.94);
-    border-bottom-color: rgba(245,237,214,0.10);
+    background: rgba(6,2,0,0.93);
+    border-bottom-color: rgba(249,242,223,0.10);
   }
   body.about .nav-links.open a {
-    color: rgba(245,237,214,0.70);
-    border-bottom-color: rgba(245,237,214,0.10);
+    color: rgba(249,242,223,0.72);
+    border-bottom-color: rgba(249,242,223,0.10);
   }
   body.about .nav-links.open a:hover,
-  body.about .nav-links.open a[aria-current] { color: var(--p1); }
+  body.about .nav-links.open a[aria-current] { color: #F9F2DF; }
 }
