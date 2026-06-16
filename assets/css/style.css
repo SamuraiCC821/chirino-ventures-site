@@ -168,7 +168,10 @@ body.home::after { display: none; }
   will-change: transform;
 }
 /* Mobile calligraphy — hidden on desktop, shown when SVG is hidden on mobile */
-.splash-mobile-calli { display: none; }
+.splash-mobile-calli {
+  display: none;
+  visibility: hidden;
+}
 
 .splash-enter {
   position: absolute;
