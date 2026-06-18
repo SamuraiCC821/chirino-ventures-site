@@ -81,7 +81,7 @@
 
   <!-- Calligraphy overlay | ink dripping onto parchment effect -->
   <svg class="splash-svg" xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice"
+       viewBox="0 0 1200 800" preserveAspectRatio="xMidYMin slice"
        aria-hidden="true" role="img">
     <defs>
 
@@ -96,47 +96,48 @@
       </filter>
 
       <!-- Drip reveal clip | Line 1 (0.4s start, 1.3s) -->
+      <!-- y positions shifted up 62 units to compensate for xMidYMin (no top crop) -->
       <clipPath id="clip1">
-        <rect x="692" y="102" width="468" height="0">
+        <rect x="692" y="40" width="468" height="0">
           <animate attributeName="height" from="0" to="86"
                    begin="0.4s" dur="1.3s" fill="freeze"/>
         </rect>
-        <ellipse cx="755"  cy="186" rx="3.5" ry="0">
+        <ellipse cx="755"  cy="124" rx="3.5" ry="0">
           <animate attributeName="ry" from="0" to="18" begin="1.1s" dur="0.5s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="860"  cy="184" rx="2.5" ry="0">
+        <ellipse cx="860"  cy="122" rx="2.5" ry="0">
           <animate attributeName="ry" from="0" to="13" begin="1.4s" dur="0.4s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="968"  cy="187" rx="4"   ry="0">
+        <ellipse cx="968"  cy="125" rx="4"   ry="0">
           <animate attributeName="ry" from="0" to="20" begin="1.0s" dur="0.5s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="1072" cy="185" rx="2.5" ry="0">
+        <ellipse cx="1072" cy="123" rx="2.5" ry="0">
           <animate attributeName="ry" from="0" to="14" begin="1.5s" dur="0.4s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="1140" cy="186" rx="3"   ry="0">
+        <ellipse cx="1140" cy="124" rx="3"   ry="0">
           <animate attributeName="ry" from="0" to="16" begin="1.2s" dur="0.4s" fill="freeze"/>
         </ellipse>
       </clipPath>
 
       <!-- Drip reveal clip | Line 2 (2.0s start, 1.4s) -->
       <clipPath id="clip2">
-        <rect x="706" y="192" width="452" height="0">
+        <rect x="706" y="130" width="452" height="0">
           <animate attributeName="height" from="0" to="84"
                    begin="2.0s" dur="1.4s" fill="freeze"/>
         </rect>
-        <ellipse cx="762"  cy="274" rx="3"   ry="0">
+        <ellipse cx="762"  cy="212" rx="3"   ry="0">
           <animate attributeName="ry" from="0" to="16" begin="2.8s" dur="0.5s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="862"  cy="272" rx="2.5" ry="0">
+        <ellipse cx="862"  cy="210" rx="2.5" ry="0">
           <animate attributeName="ry" from="0" to="12" begin="3.1s" dur="0.4s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="966"  cy="275" rx="4"   ry="0">
+        <ellipse cx="966"  cy="213" rx="4"   ry="0">
           <animate attributeName="ry" from="0" to="20" begin="2.7s" dur="0.5s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="1062" cy="273" rx="2.5" ry="0">
+        <ellipse cx="1062" cy="211" rx="2.5" ry="0">
           <animate attributeName="ry" from="0" to="13" begin="3.2s" dur="0.4s" fill="freeze"/>
         </ellipse>
-        <ellipse cx="1134" cy="274" rx="3"   ry="0">
+        <ellipse cx="1134" cy="212" rx="3"   ry="0">
           <animate attributeName="ry" from="0" to="16" begin="2.9s" dur="0.4s" fill="freeze"/>
         </ellipse>
       </clipPath>
@@ -147,7 +148,7 @@
     <g class="ink-line-1">
       <g clip-path="url(#clip1)">
         <text class="calli calli-fill"
-              x="700" y="172" font-size="54"
+              x="700" y="110" font-size="54"
               filter="url(#ink-rough)">Saltwater and</text>
       </g>
     </g>
@@ -156,7 +157,7 @@
     <g class="ink-line-2">
       <g clip-path="url(#clip2)">
         <text class="calli calli-fill"
-              x="714" y="258" font-size="54"
+              x="714" y="196" font-size="54"
               filter="url(#ink-rough)">Ambition.</text>
       </g>
     </g>
@@ -177,7 +178,6 @@
     <div class="splash-contact">
       <a href="mailto:main@christianchirino.com" class="splash-contact-link">main@christianchirino.com</a>
       <a href="https://www.linkedin.com/in/christian-chirino-9027a341" class="splash-contact-link" target="_blank" rel="me noopener noreferrer">LinkedIn ↗</a>
-      <span class="splash-contact-note">No form. No chatbot. Just reach out.</span>
     </div>
   </div>
 
