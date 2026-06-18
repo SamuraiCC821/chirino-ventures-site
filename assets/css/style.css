@@ -225,7 +225,7 @@ body.home .site-nav .nav-toggle span { background: var(--ink); }
   font-weight: 300;
   line-height: 1.75;
   color: #1A1005;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 .splash-contact {
   display: flex;
