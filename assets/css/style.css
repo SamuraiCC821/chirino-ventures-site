@@ -194,7 +194,7 @@ body.home::after { display: none; }
   color: var(--crimson);
   border-color: var(--crimson);
 }
-@media(max-width: 860px) {
+@media(max-width: 1200px) {
   .splash-enter {
     top: auto; right: auto;
     bottom: 3rem; left: 50%;
@@ -209,7 +209,7 @@ body.home .site-nav .nav-links a:hover,
 body.home .site-nav .nav-links a[aria-current] { color: var(--crimson); }
 body.home .site-nav .nav-toggle span { background: var(--ink); }
 
-/* Bio + contact overlay — left edge under "m" in Ambition. */
+/* Bio + contact overlay — below calligraphy in the sky area */
 .splash-bio {
   position: absolute;
   left: 62.5%; top: 32%;
@@ -466,15 +466,29 @@ body.home::after { display: none; }
 .js [data-reveal][data-delay="1"] { transition-delay: 0.2s; }
 .js [data-reveal][data-delay="2"] { transition-delay: 0.4s; }
 
+/* ─── SPLASH RESIZE OVERRIDE ────────────────────────────── */
+/* JS adds .splash-resized to body the moment the window narrows */
+body.splash-resized .splash-svg       { display: none; }
+body.splash-resized .splash-bio-text  { display: none; }
+body.splash-resized .splash-bio {
+  left: auto; right: 5%; top: 18%;
+  max-width: 60vw; text-align: right;
+  animation: none; opacity: 1;
+}
+body.splash-resized .splash-contact   { align-items: flex-end; gap: .5rem; }
+body.splash-resized .splash-contact-link { font-size: .65rem; }
+body.splash-resized .nav-links        { display: none; }
+body.splash-resized .nav-toggle       { display: flex; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
-@media(max-width: 860px) {
+@media(max-width: 1200px) {
   /* ── Splash: mobile portrait fix ── */
   .splash-img { background-position: 50% 18%; }
 
-  /* Desktop SVG clips badly at portrait widths — hide it */
+  /* Desktop SVG clips badly at narrow widths — hide it */
   .splash-svg { display: none; }
 
-  /* Mobile: hide calligraphy and bio — clean image on portrait */
+  /* Mobile: hide calligraphy and bio — clean image */
   .splash-mobile-calli { display: none; }
   .splash-bio-text { display: none; }
 
@@ -568,7 +582,7 @@ body.about .footer-copy { color: rgba(249,242,223,0.35); }
 body.about .footer-mark { color: rgba(249,242,223,0.16); }
 
 /* Mobile nav dropdown */
-@media(max-width: 860px) {
+@media(max-width: 1200px) {
   body.about .nav-links.open {
     background: rgba(6,2,0,0.93);
     border-bottom-color: rgba(249,242,223,0.10);
@@ -634,7 +648,7 @@ body.now .footer-copy { color: rgba(245,237,214,0.35); }
 body.now .footer-mark { color: rgba(245,237,214,0.16); }
 
 /* Mobile nav dropdown */
-@media(max-width: 860px) {
+@media(max-width: 1200px) {
   body.now .nav-links.open {
     background: rgba(8,5,2,0.94);
     border-bottom-color: rgba(245,237,214,0.10);

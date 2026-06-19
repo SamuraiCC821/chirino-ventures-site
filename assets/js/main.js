@@ -131,4 +131,17 @@
 
   // ── YEAR ─────────────────────────────────────────────────
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+
+  // ── SPLASH: force mobile layout on small/resized windows ─────
+  // The desktop calligraphy layout only works at ~1200px+ wide and ~700px+ tall.
+  // Below those thresholds (on load OR after resize), snap to the clean mobile layout.
+  if (document.querySelector('.splash-svg')) {
+    const body = document.body;
+    function checkSplashLayout() {
+      const small = window.innerWidth < 1200 || window.innerHeight < 700;
+      body.classList.toggle('splash-resized', small);
+    }
+    checkSplashLayout(); // check immediately on load
+    window.addEventListener('resize', checkSplashLayout, { passive: true });
+  }
 })();
