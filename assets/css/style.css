@@ -477,7 +477,7 @@ body.splash-resized .splash-bio {
 }
 body.splash-resized .splash-contact   { align-items: flex-end; gap: .5rem; }
 body.splash-resized .splash-contact-link { font-size: .65rem; }
-body.splash-resized .nav-links        { display: none; }
+body.splash-resized .nav-links:not(.open) { display: none; }
 body.splash-resized .nav-toggle       { display: flex; }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
