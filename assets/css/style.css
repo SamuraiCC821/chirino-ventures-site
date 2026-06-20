@@ -471,7 +471,7 @@ body.home::after { display: none; }
 body.splash-resized .splash-svg       { display: none; }
 body.splash-resized .splash-bio-text  { display: none; }
 body.splash-resized .splash-bio {
-  left: auto; right: 5%; top: 18%;
+  left: auto; right: 5%;
   max-width: 60vw; text-align: right;
   animation: none; opacity: 1;
 }
