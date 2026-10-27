@@ -1,0 +1,24 @@
+# Everything in this repo is published to christianchirino.com.
+# Keep local tooling, drafts and anything private out of it.
+
+# Claude / editor / local tooling
+.claude/
+*.local.json
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Drafts, notes, screenshots
+drafts/
+notes/
+Screenshot*
+*.psd
+
+# OS junk
+.DS_Store
+Thumbs.db
